@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Inter (400-900) and DM Sans (400-900 where available) from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: unset;
+    /* Use DM Sans for headings by default (falls back to Inter) */
+    font-family: var(--font-dm-sans);
+    font-weight: 700;
+  }
+
+  :root {
+    /* Font family variables */
+    --font-inter:
+      'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    --font-dm-sans: 'DM Sans', var(--font-inter);
+    --font-sans: var(--font-inter);
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --primary: #c7eacf;
+    --secondary: #0d5b27;
+
+    --card: 240 5% 96%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 6% 80%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.2rem;
+
+    --success: 196 52% 74%;
+    --warning: 34 89% 85%;
+    --error: 10 100% 86%;
+  }
+
+  [data-theme='dark'] {
+    --background: 0 0% 0%;
+    --foreground: 210 40% 98%;
+
+    --card: 0 0% 4%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0, 0%, 15%, 0.8;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --success: 196 100% 14%;
+    --warning: 34 51% 25%;
+    --error: 10 39% 43%;
+  }
+}
+
+/* Font Family Utilities */
+.font-inter {
+  font-family: var(--font-inter) !important;
+}
+.font-dm-sans {
+  font-family: var(--font-dm-sans) !important;
+}
+
+/* Inter Font Weights */
+.font-inter-400 {
+  font-family: var(--font-inter);
+  font-weight: 400;
+}
+.font-inter-500 {
+  font-family: var(--font-inter);
+  font-weight: 500;
+}
+.font-inter-600 {
+  font-family: var(--font-inter);
+  font-weight: 600;
+}
+.font-inter-700 {
+  font-family: var(--font-inter);
+  font-weight: 700;
+}
+.font-inter-800 {
+  font-family: var(--font-inter);
+  font-weight: 800;
+}
+.font-inter-900 {
+  font-family: var(--font-inter);
+  font-weight: 900;
+}
+
+/* DM Sans Font Weights */
+.font-dm-400 {
+  font-family: var(--font-dm-sans);
+  font-weight: 400;
+}
+.font-dm-500 {
+  font-family: var(--font-dm-sans);
+  font-weight: 500;
+}
+.font-dm-600 {
+  font-family: var(--font-dm-sans);
+  font-weight: 600;
+}
+.font-dm-700 {
+  font-family: var(--font-dm-sans);
+  font-weight: 700;
+}
+.font-dm-800 {
+  font-family: var(--font-dm-sans);
+  font-weight: 800;
+}
+.font-dm-900 {
+  font-family: var(--font-dm-sans);
+  font-weight: 900;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground min-h-[100vh] flex flex-col;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Utility classes / examples to opt into DM Sans or Inter for specific sections */
+.font-inter {
+  font-family: var(--font-inter) !important;
+}
+.font-dm-sans {
+  font-family: var(--font-dm-sans) !important;
+}
+
+html {
+  opacity: 0;
+}
+
+html[data-theme='dark'],
+html[data-theme='light'] {
+  opacity: initial;
+}
+
+.bg-primary {
+  background-color: #0d5b27;
+}
+
+.text-primary {
+  color: #0d5b27;
+}
+.text-light {
+  color: #1e1e1e;
+}
+.bg-light {
+  color: #1e1e1e;
+}
+
+.border-primary {
+  border-color: #0d5b27;
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.border-secondary {
+  border-color: var(--secondary);
+}
+
+.responsive-mx {
+  @apply mx-4 sm:mx-5  md:mx-[2vw] lg:mx-[3vw];
+}
+.responsive {
+  @apply xl:max-w-7xl md:mx-[4vw] mx-4 sm:mx-5 xl:mx-auto;
+}
+
+.flex-between-center {
+  @apply flex justify-between items-center;
+}
+.flex-between-start {
+  @apply flex justify-between items-start;
+}
+
+/* DEBUG: visible outline to confirm globals.css is applied */
+.debug-outline {
+  outline: 4px solid magenta !important;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
