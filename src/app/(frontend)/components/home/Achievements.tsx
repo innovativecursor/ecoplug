@@ -56,7 +56,7 @@ export default function Achievements() {
   const stats = achievements
 
   return (
-    <section className="bg-primary text-white md:py-16 py-8">
+    <section className="bg-primary text-white md:py-16 py-9">
       <div className="responsive grid md:grid-cols-2 items-start">
         <div>
           <h2 className="text-3xl md:text-4xl font-medium tracking-wide">OUR ACHIEVEMENTS </h2>

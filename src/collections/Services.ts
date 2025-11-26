@@ -12,10 +12,7 @@ export const Services: CollectionConfig = {
   },
 
   access: {
-    // Anyone can read
     read: () => true,
-
-    // Only logged-in admin users can create/update/delete
     create: ({ req }: { req: { user?: unknown } }) => !!req.user,
     update: ({ req }: { req: { user?: unknown } }) => !!req.user,
     delete: ({ req }: { req: { user?: unknown } }) => !!req.user,

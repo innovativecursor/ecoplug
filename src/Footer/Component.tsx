@@ -5,16 +5,26 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-[#0d5b27] text-white md:py-12 pt-8 pb-2 ">
       <div className="responsive">
-        <div className="flex justify-between sm:flex-row flex-col md:gap-0 gap-6 md:items-start items-center">
-          <div className="flex w-full justify-between md:items-start md:gap-32 gap-12">
+        <div className="flex justify-between sm:flex-row flex-col lg:gap-0 gap-6 md:items-start items-center">
+          <div className="flex w-full justify-between md:items-start lg:gap-32 md:gap-4 gap-12">
             <div className="">
               <h3 className="text-base font-semibold mb-3">Services</h3>
               <ul className="space-y-2 md:text-sm text-xs opacity-90">
-                 <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
+                <li>
+                  <a href="#home">Home</a>
+                </li>
+                <li>
+                  <a href="#about">About</a>
+                </li>
+                <li>
+                  <a href="#services">Services</a>
+                </li>
+                <li>
+                  <a href="#projects">Projects</a>
+                </li>
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
               </ul>
             </div>
 

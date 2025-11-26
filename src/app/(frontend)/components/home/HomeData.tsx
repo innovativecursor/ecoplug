@@ -11,7 +11,6 @@ export const HomeData = () => {
   return (
     <>
       <Hero />
-
       <Aboutus />
       <Services />
       <Projects />

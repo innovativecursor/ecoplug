@@ -6,7 +6,7 @@ export const AchieveData: GlobalConfig = {
 
   access: {
     read: () => true,
-    update: ({ req }) => !!req.user, // only admin/user can edit
+    update: ({ req }) => !!req.user, 
   },
 
   fields: [

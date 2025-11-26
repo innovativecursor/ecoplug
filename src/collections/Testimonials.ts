@@ -10,10 +10,7 @@ export const Testimonials: CollectionConfig = {
     useAsTitle: 'name',
   },
   access: {
-    // Who can read the testimonials
     read: () => true,
-    // Only admin users can create/update/delete
-    // typed request param to avoid implicit any
     create: ({ req }: { req: { user?: unknown } }) => !!req.user,
     update: ({ req }: { req: { user?: unknown } }) => !!req.user,
     delete: ({ req }: { req: { user?: unknown } }) => !!req.user,
@@ -40,7 +37,7 @@ export const Testimonials: CollectionConfig = {
     {
       name: 'image',
       type: 'upload',
-      relationTo: 'media', // assuming you already have a Media collection
+      relationTo: 'media', 
       required: true,
     },
   ],

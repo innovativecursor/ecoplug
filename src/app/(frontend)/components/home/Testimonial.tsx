@@ -23,7 +23,7 @@ export const Testimonial: React.FC = () => {
   if (!testimonials || testimonials.length === 0) return null
 
   return (
-    <section className="md:py-20 py-16 text-black">
+    <section className="md:py-20 py-12 text-black">
       <div className="flex justify-center items-center flex-col">
         <h2 className="text-xl text-black md:text-2xl font-medium tracking-wide md:mb-6 mb-4">
           WHAT OUR CLIENTS ARE SAYING
