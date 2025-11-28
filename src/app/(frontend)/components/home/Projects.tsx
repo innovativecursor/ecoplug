@@ -18,7 +18,7 @@ export default function Projects() {
   }
 
   return (
-    <section id="project" className="md:py-20 py-8 md:mt-28 mt-8 bg-[#0d0d0d] text-white">
+    <section id="projects" className="md:py-20 py-8 md:mt-28 mt-8 bg-[#0d0d0d] text-white">
       <div className="responsive">
         <h2 className="text-xl text-white md:text-3xl font-medium tracking-wide md:mb-6 mb-3">
           OUR RECENT PROJECTS
