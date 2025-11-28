@@ -1,6 +1,6 @@
-const baseURLLive = 'http://localhost:3000/api'
-const baseURLDev = 'http://localhost:3000/api'
-// https://ecoplugsolution.com
+const baseURLLive = 'https://ecoplugsolution.com/api'
+const baseURLDev = 'https://ecoplugsolution.com/api'
+
 const isLive = false
 const baseUrl = isLive ? baseURLLive : baseURLDev
 

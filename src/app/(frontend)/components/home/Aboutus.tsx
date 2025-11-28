@@ -1,106 +1,14 @@
-// import Image from 'next/image'
-// import { Check } from 'lucide-react'
-
-// export const Aboutus = () => {
-//   return (
-//     <section
-//       id="about"
-//       className="
-//         w-full xl:pt-32 md:pt-16 pt-10
-//         group opacity-10 hover:opacity-100
-//         transition-all duration-500 cursor-pointer
-//       "
-//     >
-//       <div className="responsive grid grid-cols-1 md:grid-cols-2  lg:gap-0 gap-8 sm:items-start items-center">
-//         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-//           <div className="col-span-1 sm:col-span-2">
-//             <div className="relative w-full lg:h-[500px] h-[300px] overflow-hidden">
-//               <div
-//                 className="
-//                   absolute inset-0
-//                   opacity-0
-//                   -translate-x-20
-//                   group-hover:opacity-100
-//                   group-hover:translate-x-0
-//                   transition-all duration-300 ease-out
-//                 "
-//               >
-//                 <Image src="/about1.png" alt="Hover Image" fill className="object-contain" />
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-
-//         <div
-//           className="
-//             opacity-80
-//             -translate-x-5
-//             group-hover:opacity-100
-//             group-hover:translate-x-0
-//             transition-all duration-500 ease-out
-//             flex items-center flex-col sm:items-start
-//           "
-//         >
-//           <h2 className="text-xl text-black md:text-3xl font-semibold tracking-wide md:mb-7 mb-3">
-//             ABOUT ECO PLUG SOLUTION
-//           </h2>
-
-//           <div className="w-48 sm:h-[2px] h-[2px] bg-[#0d5b27] mb-5"></div>
-
-//           <p className="text-black w-full md:mt-3 max-w-xl md:text-start text-center font-medium tracking-wide leading-7 md:mb-9 mb-6 text-sm md:text-base">
-//             Eco PLUG Solution is a trusted electrical service provider delivering reliable and
-//             eco-friendly EV charging installations. Our trained technicians follow standard safety
-//             guidelines, ensuring every installation matches your requirements and the power capacity
-//             of your property.
-//           </p>
-
-//           <h3 className="font-semibold text-black text-base md:text-lg md:mt-9 md:mb-4 mb-2">
-//             What We Stand For:
-//           </h3>
-
-//           <div className="w-20 h-[2px] bg-[#0d5b27] md:mb-8 mb-6"></div>
-
-//           <div className="grid text-black grid-cols-2 gap-y-4 gap-x-6 md:mb-10 mb-7 text-[10px] md:text-sm">
-//             {[
-//               'Safe & certified installations',
-//               'Energy-efficient',
-//               'Quick service with transparent pricing',
-//               'Long-term support',
-//             ].map((item, i) => (
-//               <div key={i} className="flex items-center gap-3">
-//                 <div className="bg-[#0d5b27] md:w-5 md:h-5 w-4 h-4 rounded-full flex justify-center items-center">
-//                   <Check className="text-white md:w-4 md:h-4 w-3 h-3" />
-//                 </div>
-//                 {item}
-//               </div>
-//             ))}
-//           </div>
-
-//           <div className="flex flex-wrap gap-5">
-//             <button className="bg-[#0d5b27] text-white md:w-52 md:py-2.5 w-36 py-1.5 rounded-md text-xs md:text-base hover:bg-black transition">
-//               Company Profile
-//             </button>
-//             <button className="bg-[#0d5b27] text-white md:w-52 md:py-2.5 w-36 py-1.5 rounded-md text-xs md:text-base hover:bg-black transition">
-//               Product & Services
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }
-
 import Image from 'next/image'
 import { Check } from 'lucide-react'
 import { motion, useInView } from 'framer-motion'
+import type { Variants } from 'framer-motion'
 import { useRef } from 'react'
 
 export const Aboutus = () => {
   const ref = useRef(null)
   const inView = useInView(ref, { amount: 0.3, once: false })
 
-  // Image Animation
-  const imageAnim = {
+  const imageAnim: Variants = {
     hidden: { opacity: 0, x: -40, scale: 0.95, filter: 'blur(6px)' },
     show: {
       opacity: 1,
@@ -111,8 +19,7 @@ export const Aboutus = () => {
     },
   }
 
-  // Text block with stagger
-  const textParent = {
+  const textParent: Variants = {
     hidden: {},
     show: {
       transition: {
@@ -121,8 +28,7 @@ export const Aboutus = () => {
     },
   }
 
-  // Each text element animation
-  const textItem = {
+  const textItem: Variants = {
     hidden: { opacity: 0, y: 20, filter: 'blur(4px)' },
     show: {
       opacity: 1,
@@ -134,8 +40,7 @@ export const Aboutus = () => {
 
   return (
     <section id="about" ref={ref} className="w-full xl:pt-32 md:pt-16 pt-10">
-      <div className="responsive grid grid-cols-1 md:grid-cols-2 lg:gap-0 gap-8 sm:items-start items-center">
-        {/* IMAGE PART */}
+      <div className="responsive grid grid-cols-1 md:grid-cols-2 lg:gap-0 gap-8 items-center">
         <motion.div
           variants={imageAnim}
           initial="hidden"
@@ -143,22 +48,21 @@ export const Aboutus = () => {
           className="grid grid-cols-1 sm:grid-cols-2 gap-6"
         >
           <div className="col-span-1 sm:col-span-2">
-            <div className="relative w-full lg:h-[500px] h-[300px] overflow-hidden">
+            <div className="relative w-full md:h-[430px] lg:h-[500px] h-[300px] overflow-hidden">
               <Image src="/about1.png" alt="About image" fill className="object-contain" />
             </div>
           </div>
         </motion.div>
 
-        {/* TEXT PART */}
         <motion.div
           variants={textParent}
           initial="hidden"
           animate={inView ? 'show' : 'hidden'}
-          className="flex items-center flex-col sm:items-start"
+          className="flex items-center flex-col "
         >
           <motion.h2
             variants={textItem}
-            className="text-xl text-black md:text-3xl font-semibold tracking-wide md:mb-7 mb-3"
+            className="text-xl text-black md:text-3xl font-semibold tracking-wide lg:mb-7 mb-3"
           >
             ABOUT ECO PLUG SOLUTION
           </motion.h2>
@@ -170,7 +74,7 @@ export const Aboutus = () => {
 
           <motion.p
             variants={textItem}
-            className="text-black w-full md:mt-3 max-w-xl md:text-start text-center font-medium tracking-wide leading-7 md:mb-9 mb-6 text-sm md:text-base"
+            className="text-black w-full lg:mt-3 max-w-xl md:text-start text-center font-medium tracking-wide leading-7 lg:mb-9 mb-6 text-sm md:text-base"
           >
             Eco PLUG Solution is a trusted electrical service provider delivering reliable and
             eco-friendly EV charging installations. Our trained technicians follow standard safety
@@ -180,19 +84,19 @@ export const Aboutus = () => {
 
           <motion.h3
             variants={textItem}
-            className="font-semibold text-black text-base md:text-lg md:mt-9 md:mb-4 mb-2"
+            className="font-semibold text-black text-base md:text-lg lg:mt-9 md:mb-4 mb-2"
           >
             What We Stand For:
           </motion.h3>
 
           <motion.div
             variants={textItem}
-            className="w-20 h-[2px] bg-[#0d5b27] md:mb-8 mb-6"
+            className="w-20 h-[2px] bg-[#0d5b27] lg:mb-8 mb-6"
           ></motion.div>
 
           <motion.div
             variants={textItem}
-            className="grid text-black grid-cols-2 gap-y-4 gap-x-6 md:mb-10 mb-7 text-[10px] md:text-sm"
+            className="grid text-black grid-cols-2 gap-y-4 gap-x-6 lg:mb-10 mb-7 text-[10px] md:text-sm"
           >
             {[
               'Safe & certified installations',
@@ -215,13 +119,13 @@ export const Aboutus = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="bg-[#0d5b27] text-white md:w-52 md:py-2.5 w-36 py-1.5 rounded-md text-xs md:text-base hover:bg-black transition">
+              <button className="bg-[#0d5b27] text-white md:w-52 lg:py-2.5 md:py-2 w-36 py-1.5 rounded-md text-xs md:text-sm lg:text-base hover:bg-black transition">
                 Company Profile
               </button>
             </a>
 
             <a href="#services">
-              <button className="bg-[#0d5b27] text-white md:w-52 md:py-2.5 w-36 py-1.5 rounded-md text-xs md:text-base hover:bg-black transition">
+              <button className="bg-[#0d5b27] text-white md:w-52 lg:py-2.5 md:py-2 w-36 py-1.5 rounded-md text-xs md:text-sm lg:text-base hover:bg-black transition">
                 Product & Services
               </button>
             </a>

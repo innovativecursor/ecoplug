@@ -130,7 +130,7 @@ export default function ContactSection() {
                 >
                   Send Message
                 </button>
-                {/* Social Icons */}
+
                 <div className="sm:flex hidden gap-5 mt-6">
                   {social?.facebook && (
                     <a href={social.facebook} target="_blank" rel="noopener noreferrer">
