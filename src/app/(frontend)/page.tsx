@@ -4,7 +4,7 @@ import { HomeData } from './components/home/HomeData'
 export const metadata: Metadata = {
   title: 'ECO Plug',
   description:
-    'At GSL CDC, we transform ideas into lasting structures. From architectural design and project management to structural steel works and billboard fabrication, we deliver innovative and sustainable solutions tailored to every client’s needs.',
+    'Eco Plug Solution is a trusted electrical service provider specializing in safe, reliable, and eco-friendly EV charging installations. Our trained technicians follow proper safety standards, ensuring every setup matches your needs and your property’s power capacity.',
 }
 
 export default function HomePage() {

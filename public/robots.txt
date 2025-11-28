@@ -3,9 +3,9 @@ User-agent: *
 Disallow: /admin/*
 
 # Host
-Host: https://gslcdconsultancy.com/
+Host: https://ecoplugsolution.com/
 
 # Sitemaps
-Sitemap: https://gslcdconsultancy.com/sitemap.xml
-Sitemap: https://gslcdconsultancy.com//pages-sitemap.xml
-Sitemap: https://gslcdconsultancy.com//posts-sitemap.xml
+Sitemap: https://ecoplugsolution.com/sitemap.xml
+Sitemap: https://ecoplugsolution.com//pages-sitemap.xml
+Sitemap: https://ecoplugsolution.com//posts-sitemap.xml

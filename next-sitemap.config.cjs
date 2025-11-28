@@ -1,4 +1,4 @@
-const SITE_URL = 'https://gslcdconsultancy.com/'
+const SITE_URL = 'https://ecoplugsolution.com/'
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
