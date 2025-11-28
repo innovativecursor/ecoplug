@@ -269,3 +269,10 @@ html {
     transform: translateX(0);
   }
 }
+
+
+
+.project-img {
+  will-change: transform, opacity;
+  transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+}

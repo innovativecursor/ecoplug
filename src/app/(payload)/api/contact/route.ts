@@ -35,8 +35,11 @@ export async function POST(req: Request) {
       },
     })
 
+  
+
     await transporter.sendMail({
-      from: process.env.SMTP_FROM,
+      from: `"${data.fullName} (Eco Plug Website)" <${process.env.SMTP_USER}>`,
+      replyTo: data.email,
       to: process.env.SMTP_USER,
       subject: `New Contact Submission from ${data.fullName}`,
       text: `You have a new contact form submission:
